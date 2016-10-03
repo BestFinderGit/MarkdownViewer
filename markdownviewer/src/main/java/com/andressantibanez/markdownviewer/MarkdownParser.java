@@ -48,6 +48,12 @@ public class MarkdownParser {
         messageContent = messageContent.replace(Configurations.Tokens.MULTI_LINE_CODE, "");
         messageContent = messageContent.replace(Configurations.Tokens.MENTION, "");
 
+        //String new line at end of NoStyleText
+        if (contentWithNoStyle()) {
+            if(messageContent.lastIndexOf("\n") == messageContent.length()-1)
+                messageContent = messageContent.substring(0, messageContent.length()-1);
+        }
+
         //Strip new lines at start and end of MultiLineCode
         if (contentIsMultiLineCode()) {
             //Start
