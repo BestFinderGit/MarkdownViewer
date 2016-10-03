@@ -1,5 +1,7 @@
 package com.andressantibanez.markdownviewer;
 
+import java.util.regex.Pattern;
+
 public class MarkdownParser {
 
     private String message;
@@ -54,6 +56,11 @@ public class MarkdownParser {
             //End
             if(messageContent.lastIndexOf("\n") == messageContent.length()-1)
                 messageContent = messageContent.substring(0, messageContent.length()-1);
+        }
+
+        //Add space at start and end of SingleLineCode
+        if (contentIsSingleLineCode()) {
+            messageContent = " " + messageContent + " ";
         }
 
         return messageContent;
