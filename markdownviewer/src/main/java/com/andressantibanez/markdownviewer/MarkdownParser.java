@@ -1,7 +1,5 @@
 package com.andressantibanez.markdownviewer;
 
-import java.util.regex.Pattern;
-
 public class MarkdownParser {
 
     private String message;

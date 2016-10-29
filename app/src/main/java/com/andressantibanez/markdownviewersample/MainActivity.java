@@ -15,8 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         MarkdownView markdownView = (MarkdownView) findViewById(R.id.markdown_view);
 
-//        String markdown = "```this is awesome``` and **bold** ~~hello~~ `more code`";
-        String markdown = "@andres ```this is awesome``` and **bold** \n```\nfunction(){\n  return 1;\n}\n``` cc @everyone";
+        String markdown = "@andres ```this is awesome``` and **bold** \n```\nfunction(){\n  return 1;\n}\n``` cc @everyone. Here is a link www.google.com";
         markdownView.setMarkdown(markdown);
     }
 }
